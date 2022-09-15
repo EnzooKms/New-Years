@@ -4,7 +4,19 @@ const minsEl = document.getElementById('mins')
 const secondsEl = document.getElementById('seconds')
 const titre = document.getElementById("titre")
 
-let newYears = '9 jun 2022 12:00:00'
+let date = prompt("Quel date ?")
+
+while(new Date(date) == "Invalid Date") {
+
+if(new Date(date) == "Invalid Date") {
+     alert("Date invalide")
+     date = prompt("Quel date ?")
+}
+else break
+
+}
+
+let newYears = date 
 
 titre.innerHTML = `Réveillon de Nouvel an : ${newYears}`
 
